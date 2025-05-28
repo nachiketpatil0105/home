@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <script defer src="js/scripts.js"></script>
+  </head>
+  <body>
+    <!-- NAVBAR START -->
+
+    <div id="navbar"></div>
+
+    <!-- NAVBAR END -->
+
+    <!-- FOOTER  START-->
+
+    <div id="footer"></div>
+
+    <!-- FOOTER END -->
+
+    <!-- NAVBAR JS START -->
+
+    <script>
+      fetch('/html/navbar.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('navbar').innerHTML = data
+        })
+    </script>
+
+    <!-- NAVBAR JS END -->
+
+    <!-- FOOTER JS START -->
+
+    <script>
+      fetch('/html/footer.html')
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById('footer').innerHTML = data
+        })
+    </script>
+
+    <!-- FOOTER JS END -->
+  </body>
+</html>
