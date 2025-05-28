@@ -15,10 +15,6 @@
   --nav-height-desktop: 64px;
   --nav-height-mobile: 54px;
   --body-gap: 32px;
-  --footer-gradient-start: #0f172a;
-  --footer-gradient-end: #334155;
-  --footer-bg: #fff;
-  --footer-text: #000;
 }
 
 /* Make body content not hidden by nav, and add gap below nav */
