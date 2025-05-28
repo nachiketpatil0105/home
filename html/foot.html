@@ -1,16 +1,39 @@
-<footer class="bottomline">
+<footer
+  class="footer-content"
+  style="position: absolute; bottom: 0; left: 0; width: 100%"
+>
   &copy; 2025 Your Company Name. All rights reserved.
+  <div class="bottomline"></div>
+  <style>
+    :root {
+      --footer-gradient-start: #0f172a; /* Example: match your body root */
+      --footer-gradient-end: #334155; /* Example: match your body root */
+      --footer-bg: #fff; /* Example: match your body root */
+      --footer-text: #000; /* Example: match your body root */
+    }
+    .footer-content {
+      color: var(--footer-text);
+      text-align: center;
+      font-size: 0.9rem;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      background: var(--footer-bg);
+    }
+    .bottomline {
+      width: 100vw;
+      height: 5px;
+      background: linear-gradient(
+        90deg,
+        var(--footer-gradient-start) 0%,
+        var(--footer-gradient-end) 100%
+      );
+      margin: 0;
+      padding: 0;
+      border: none;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
 </footer>
-
-<style>
-  .bottomline {
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, #1e293b 0%, #64748b 100%);
-    /* Example gradient, adjust colors as needed */
-    position: static;
-    margin-top: 40px;
-    padding: 0;
-    border: none;
-  }
-</style>
