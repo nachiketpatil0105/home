@@ -1,0 +1,174 @@
+/* Dense, creative, and balanced image stack for tech/data science vibe */
+
+.image-stack {
+  position: relative;
+  width: 75vw;
+  height: 48vw;
+  min-width: 320px;
+  min-height: 220px;
+  margin: 3vw auto 4vw auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 1;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.stack-img {
+  position: absolute;
+  border-radius: 2vw;
+  box-shadow: 0 6px 32px var(--shadow, rgba(30, 41, 59, 0.18));
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.4, 2, 0.6, 1), box-shadow 0.3s,
+    z-index 0s;
+  will-change: transform;
+  object-fit: cover;
+  background: var(--background, #e2e8f0);
+  border: 3px solid var(--background, #fff);
+}
+
+/* Dense, overlapping, and visually balanced arrangement for 7 images */
+.img1 {
+  width: 30vw;
+  height: 20vw;
+  top: 0vw;
+  left: 1vw;
+  z-index: 2;
+  transform: rotate(-7deg);
+}
+.img2 {
+  width: 25vw;
+  height: 20vw;
+  top: -2vw;
+  left: 24vw;
+  z-index: 4;
+  transform: rotate(8deg);
+}
+.img3 {
+  width: 18vw;
+  height: 14vw;
+  top: 10vw;
+  left: 36vw;
+  z-index: 3;
+  transform: rotate(-4deg);
+}
+.img4 {
+  width: 22vw;
+  height: 16vw;
+  top: 6vw;
+  left: 50vw;
+  z-index: 5;
+  transform: rotate(7deg);
+}
+.img5 {
+  width: 30vw;
+  height: 20vw;
+  top: 20vw;
+  left: 0vw;
+  z-index: 1;
+  transform: rotate(-8deg);
+}
+.img6 {
+  width: 24vw;
+  height: 18vw;
+  top: 23vw;
+  left: 25vw;
+  z-index: 6;
+  transform: rotate(6deg);
+}
+.img7 {
+  width: 18vw;
+  height: 13vw;
+  top: 26vw;
+  left: 50vw;
+  z-index: 7;
+  transform: rotate(-6deg);
+}
+
+.stack-img:hover {
+  z-index: 10 !important;
+  transform: scale(1.15) rotate(0deg) !important;
+  box-shadow: 0 12px 48px var(--shadow, rgba(30, 41, 59, 0.28));
+  border-color: var(--accent, #38bdf8);
+}
+
+/* ...existing code... */
+
+/* Tablet responsiveness */
+@media (max-width: 900px) {
+  .image-stack {
+    width: 97vw;
+    height: 90vw;
+    min-height: 260px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .img1 {
+    width: 40vw;
+    height: 28vw;
+    top: 6vw;
+    left: 2vw;
+    z-index: 3;
+  }
+  .img2 {
+    width: 34vw;
+    height: 24vw;
+    top: 0vw;
+    left: 28vw;
+    z-index: 4;
+  }
+  .img3 {
+    width: 32vw;
+    height: 22vw;
+    top: 20vw;
+    left: 54vw;
+    z-index: 2;
+  }
+  /* Hide only 3 images on tablet */
+  .img4,
+  .img5,
+  .img6 {
+    display: none;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .image-stack {
+    width: 99vw;
+    height: 120vw;
+    min-height: 220px;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .img1 {
+    width: 62vw;
+    height: 40vw;
+    top: 8vw;
+    left: 2vw;
+    z-index: 3;
+  }
+  .img2 {
+    width: 54vw;
+    height: 34vw;
+    top: 0vw;
+    left: 34vw;
+    z-index: 4;
+  }
+  .img3 {
+    width: 48vw;
+    height: 30vw;
+    top: 44vw;
+    left: 18vw;
+    z-index: 2;
+  }
+  /* Hide only 3 images on mobile */
+  .img4,
+  .img5,
+  .img6 {
+    display: none;
+  }
+}
