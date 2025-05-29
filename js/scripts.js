@@ -25,7 +25,7 @@ const img4 = document.querySelector('.img4')
 const img5 = document.querySelector('.img5')
 const img6 = document.querySelector('.img6')
 const img7 = document.querySelector('.img7')
-const baseRotations = [-10, 8, -5, 12]
+const baseRotations = [-10, 8, -5, 12, -8, 6, -6]
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY || window.pageYOffset
