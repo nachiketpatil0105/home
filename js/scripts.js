@@ -29,7 +29,7 @@ const baseRotations = [-10, 8, -5, 12, -8, 6, -6]
 
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY || window.pageYOffset
-  const rotateAmount = scrollY * 0.15
+  const rotateAmount = scrollY * 2
 
   img1.style.transform = `rotate(${baseRotations[0] + rotateAmount}deg)`
   img2.style.transform = `rotate(${baseRotations[1] + rotateAmount}deg)`
